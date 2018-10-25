@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="all" name="minwt" />
+<meta name="author" content="梅干扣肉" />
+<meta name="Copyright" content="www.minwt.com版權所有" />
+<meta name="keywords" content="梅問題,教學網,jquery教學,jquery頁籤,CSS tab Menu,css教學,網頁教學">
+
+<title>梅問題‧教學網-範例展示【滑動式側邊選單】</title>
+<style>
+body{padding:0; margin:0;}
+#mwt_mwt_slider_scroll
+{
+	top: 0;
+	left:-360px;
+	width:360px;	
+	position:fixed;
+	z-index:9999;
+}
+
+#mwt_slider_content{
+	background:#3c5a98;
+	text-align:center;
+	padding-top:20px;
+}
+
+#mwt_fb_tab {
+	position:absolute;
+	top:20px;
+	right:-24px;
+	width:24px;
+	background:#3c5a98;
+	color:#ffffff;
+	font-family:Arial, Helvetica, sans-serif;	
+	text-align:center;
+	padding:9px 0;
+
+	-moz-border-radius-topright:10px;
+	-moz-border-radius-bottomright:10px;
+	-webkit-border-top-right-radius:10px;
+	-webkit-border-bottom-right-radius:10px;	
+}
+#mwt_fb_tab span {
+	display:block;
+	height:12px;
+	padding:1px 0;
+	line-height:12px;
+	text-transform:uppercase;
+	font-size:12px;
+}
+
+
+
+</style>
+
+<script type='text/javascript' src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
+<script>
+$(function(){
+	var w = $("#mwt_slider_content").width();
+	$('#mwt_slider_content').css('height', ($(window).height() - 20) + 'px' ); 
+	
+	$("#mwt_fb_tab").mouseover(function(){
+		if ($("#mwt_mwt_slider_scroll").css('left') == '-'+w+'px')
+		{
+			$("#mwt_mwt_slider_scroll").animate({ left:'0px' }, 600 ,'swing');
+		}
+	});
+	
+	
+	$("#mwt_slider_content").mouseleave(function(){
+		$("#mwt_mwt_slider_scroll").animate( { left:'-'+w+'px' }, 600 ,'swing');	
+	});	
+});
+
+</script>
+</head>
+
+<body>使用 jQuery 和 CSS3 製作向下滑動的導航選單使用 jQuery 和 CSS3 製作向下滑動的導航選單
+	<div id="mwt_mwt_slider_scroll">
+		 <div id="mwt_fb_tab">
+			<span>F</span>
+			<span>a</span>
+			<span>c</span>
+			<span>e</span>
+			<span>b</span>
+			<span>o</span>
+			<span>o</span>
+			<span>o</span>
+			<span>k</span>	
+		</div>
+		<div id="mwt_slider_content">
+			<span>test</span>
+			<table width="200" border="1">
+  <tbody>
+    <tr>
+      <th scope="row">&nbsp;</th>
+      <td>&nbsp;123</td>
+      <td>&nbsp;456</td>
+    </tr>
+    <tr>
+      <th scope="row">&nbsp;</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">&nbsp;</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+			<!iframe src="http://www.facebook.com/plugins/likebox.php?id=208757309728&amp;width=200&amp;connections=10&amp;stream=false&amp;header=false&amp;height=270" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:270px;" allowTransparency="true"><!/iframe>
+		</div>
+	</div>
+</body>
+</html>

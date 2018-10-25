@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+</head>
+<style>
+.dropdown-menu > ul {
+  position: absolute;
+  z-index: 1;
+
+  visibility: hidden;
+  transition: visibility 0.5s;
+  opacity: 0;
+}
+
+.dropdown-menu > span:focus ~ ul {
+  visibility: visible;
+  opacity: 1;
+}
+.dropdown-menu > div {
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+
+.dropdown-menu > span:focus ~ div {
+  display: block;
+}
+</style>
+<body>
+
+<div class="dropdown-menu">
+  <span tabindex="0" onclick="return true">Click Me!</span>
+  <div tabindex="0" onclick="return true"></div>
+  <ul>
+    <li><a href="#" onclick="sampleMenu(this)">Item 1</a></li>
+    <li><a href="#" onclick="sampleMenu(this)">Item 2</a></li>
+    <li><a href="#" onclick="sampleMenu(this)">Last Item</a></li>
+  </ul>
+</div>
+	
+
+</body>
+</html>

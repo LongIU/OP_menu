@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/* CSS Document */
+
+ul.navigation li {
+	position: relative;
+	float: none;
+	width: 142px;
+	list-style: none;
+}
+ul.navigation li a{
+	display: block;
+	padding: 12px 20px;
+	background: #8DAD69;
+	color: #FFF;
+	text-decoration:none;
+}
+ul.navigation > li > a{
+	border-bottom: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+}
+ul.navigation > li > a:hover{
+	color: #666;
+	background:#DDD;
+}
+ul.navigation li a:hover{
+	color: #666;
+	background: #DDD;
+}
+ul.navigation li ul{
+	display:none;
+	float: left;
+	position: absolute;
+	left: 142px;
+	top: 0px;
+	margin: 0px;
+	padding: 0px;
+	
+}
+ul.navigation li:hover > ul{
+	display: block;
+}
+ul.navigation ul li {
+	border-bottom: 1px solid #DDD;
+	border-left: 1px solid #DDD;
+}
+ul.navigation ul li:last-child{
+	border-bottom: none;
+}
+ul.navigation ul a{
+	#width: 142px;
+	padding: 10px 12px;
+	color: #666;
+	background: #EEE;
+}
+ul.navigation ul li:hover >ul{
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 142px;
+}

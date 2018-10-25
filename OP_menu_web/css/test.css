@@ -1,0 +1,41 @@
+*{
+margin: 0px;
+padding: 0px;
+} 
+.content{
+margin: 40px 100px;
+float: left;
+}  
+ul ,li{
+list-style: none;
+} 
+.main,.hmain{
+width: 150px;
+background: #222;
+font-size: 16px;
+text-align: center;
+cursor: pointer;
+line-height: 40px;
+color: white;
+} 
+.main>a,.hmain>a{
+text-decoration: none;
+color: white;
+display: inline-block;
+width: 150px;
+min-height: 40px;
+} 
+.main:hover,.hmain:hover{
+background: black;
+} 
+.child{
+background: #444;
+display:none;
+} 
+.child li:hover{
+background: #333333;
+}
+/*垂直導航欄左浮動*/
+.hmain{
+float: left;
+}

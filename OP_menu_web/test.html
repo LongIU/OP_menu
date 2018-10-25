@@ -1,0 +1,44 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns = "http://www.w3.org/1999/xhtml">
+
+    <head>
+        <script = "text/javascript">
+                        //<script = "text/javascript">  = 之間要有兩個空白
+        <!--
+        history.forward();
+        // -->     
+                        //改變 IFRAME 元素內的網頁
+        function chgFrame( url )
+        {
+            var o=document.getElementById('iframe');
+            o.src=url;
+            // o.contentWindow.location.href=url;
+            //frames[1].location.href=url;
+        }
+        </script>
+        <title>C++物件導向程式設計</title>    <!--page's name-->
+    </head>
+    <body>
+        <h1>C++物件導向程式設計</h1>
+        <br><br>
+        <p>你好！ 你呷飽沒？</p>    
+        <p>
+        <center>
+            <table>
+                <tr>
+                    <td>
+                        <div class = "menu">個人練習
+                        <a href='javascript:chgFrame("http://ucmic.blogspot.com/2011/05/jqueryjquery-include-html.html")'>阮氏武功</a>
+                                                                    //呼叫chgFrame改變 IFRAME 元素內的網頁
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </center>
+        <p>
+        <iframe src="" id="iframe" width="100%" height="100%"></iframe>
+    </body>
+</html>
+</html>
